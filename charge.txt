@@ -1,0 +1,16 @@
+CREATE KEYSPACE mykeyspace
+WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3};
+
+USE mykeyspace;
+
+CREATE TABLE charge(
+   id int PRIMARY KEY,
+   product_name text,
+   count int
+   );
+
+INSERT into charge(id,product_name,count) values (1,'Washing Machines', 50);
+
+
+INSERT into charge(id,product_name,count) values (2,'Cookers', 30);
+
